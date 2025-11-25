@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Listing UI</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #ffffff;
+    color: #222;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 60px;
+    align-items: center;
+}
+
+header h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #0078FF;
+}
+
+.hero{
+    width: 100%;
+    padding: 50px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text{
+    max-width: 45%;
+}
+
+.hero-text h1{
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.hero-text p{
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.hero-text button{
+    padding: 14px 22px;
+    border: none;
+    background: #0078FF;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-text button:hover{
+    background: #005fcc;
+}
+
+.hero img{
+    width: 480px;
+    border-radius: 12px;
+}
+
+.search-section{
+    margin-top: 40px;
+    padding: 20px 60px;
+}
+
+.search-box{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+.search-box input{
+    width: 22%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-box button{
+    padding: 12px 20px;
+    border: none;
+    background: #0078FF;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover{
+    background: #005fcc;
+}
+
+.properties{
+    padding: 60px;
+}
+
+.properties h2{
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card{
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.card h3{
+    margin: 12px 0;
+}
+
+.card p{
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.price{
+    font-weight: bold;
+    color: #0078FF;
+}
+
+footer{
+    background: #111;
+    color: #fff;
+    padding: 35px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- -------------------- NAVBAR -------------------- -->
+<header>
+    <h2>RealEstate</h2>
+
+    <nav>
+        <ul>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Listing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- -------------------- HERO -------------------- -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Find Your Dream Home <br> Today</h1>
+        <p>Explore the best properties at the most affordable prices.</p>
+        <button>Get Started</button>
+    </div>
+
+    <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="house">
+</section>
+
+<!-- -------------------- SEARCH -------------------- -->
+<div class="search-section">
+    <div class="search-box">
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Property Type">
+        <input type="text" placeholder="Price Range">
+        <input type="text" placeholder="Bedrooms">
+        <button>Search</button>
+    </div>
+</div>
+
+<!-- -------------------- PROPERTIES -------------------- -->
+<section class="properties">
+    <h2>Featured Properties</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg" alt="">
+            <h3>Modern Family Home</h3>
+            <p>Location: New Delhi</p>
+            <p class="price">$250,000</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="">
+            <h3>Luxury Villa</h3>
+            <p>Location: Mumbai</p>
+            <p class="price">$680,000</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="">
+            <h3>City Apartment</h3>
+            <p>Location: Bangalore</p>
+            <p class="price">$180,000</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- -------------------- FOOTER -------------------- -->
+<footer>
+    © 2025 RealEstate — All Rights Reserved
+</footer>
+
+</body>
+</html>
